@@ -1,12 +1,12 @@
 class CharactersController < ApplicationController
   def index
     @characters = Character.all
-    render json: characters
+    render json: @characters
   end
 
   def show
     @character = Character.find_by(id: params[:id])
-    render json: character
+    render json: @character
   end
 
   def create
